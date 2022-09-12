@@ -1,0 +1,136 @@
+@import '../../styles/variables.scss';
+
+.selectFilterContainer {
+	.selectFilterContainer__inputContainer {
+		position: relative;
+
+		button {
+			position: absolute;
+			top: 16%;
+			right: 1%;
+			width: 30px;
+			height: 20px;
+			border: none;
+			color: $red;
+			font-weight: 600;
+			background-color: #ffffff;
+			cursor: pointer;
+			padding: 0;
+		}
+
+		.selectFilterContainer__inputContainer__input {
+			width: 280px;
+			height: 30px;
+			border: 2px solid transparent;
+			outline: none;
+			color: $red;
+			background-color: #ffffff;
+			padding: 5px;
+			transition: 0.5s linear;
+			font-family: $secondary-font;
+			z-index: 1;
+
+			&::placeholder {
+				color: $red;
+				transition: 0.5s linear;
+			}
+
+			&:focus {
+				border: 2px solid #fa4753;
+				color: #fa4753;
+				box-shadow: 4px 4px 10px #070707;
+			}
+
+			&:focus::placeholder {
+				transition: 0.5s linear;
+				color: #ffa1a1;
+			}
+		}
+
+		.selectFilterContainer__inputContainer__optionsMenu {
+			position: absolute;
+			max-height: 50vh;
+			overflow-y: scroll;
+			z-index: 999;
+
+			.selectFilterContainer__inputContainer__optionsMenu__option {
+				width: 500px;
+				border: 2px solid transparent;
+				outline: none;
+				border-bottom: 2px solid #3f3f3f;
+				color: #ffffff;
+				background-color: #212121;
+				padding: 5px;
+				transition: 0.5s linear;
+				font-family: $secondary-font;
+				font-size: 12px;
+				cursor: pointer;
+
+				&:hover {
+					background-color: #fa4753;
+					color: #000000;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.selectFilterContainer {
+		.selectFilterContainer__inputContainer {
+			.selectFilterContainer__inputContainer__input {
+				width: 240px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.selectFilterContainer {
+		.selectFilterContainer__inputContainer {
+			.selectFilterContainer__inputContainer__input {
+				width: 200px;
+			}
+
+			.selectFilterContainer__inputContainer__optionsMenu {
+				width: 400px;
+				.selectFilterContainer__inputContainer__optionsMenu__option {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 720px) {
+	.selectFilterContainer {
+		.selectFilterContainer__inputContainer {
+			.selectFilterContainer__inputContainer__input {
+				width: 180px;
+			}
+
+			.selectFilterContainer__inputContainer__optionsMenu {
+				width: 300px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	.selectFilterContainer {
+		margin: 1%;
+		width: 100%;
+		.selectFilterContainer__inputContainer {
+			.selectFilterContainer__inputContainer__input {
+				width: 100%;
+			}
+
+			.selectFilterContainer__inputContainer__optionsMenu {
+				width: 100%;
+				.selectFilterContainer__inputContainer__optionsMenu__option {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

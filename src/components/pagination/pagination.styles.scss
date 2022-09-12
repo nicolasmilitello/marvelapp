@@ -1,0 +1,15 @@
+@import '../../styles/variables.scss';
+
+.paginationContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 30px;
+	font-family: $secondary-font;
+
+	span {
+		margin: 0 1rem;
+		color: #ffffff;
+		text-shadow: 0 0 10px $red;
+	}
+}
