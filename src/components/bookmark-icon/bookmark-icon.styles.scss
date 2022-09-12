@@ -1,0 +1,38 @@
+.bookmarkIconContainer {
+	position: absolute;
+	bottom: 2%;
+	left: 5%;
+
+	.bookmarkIconContainer__button-liked {
+		background: #a52d2d;
+		border: none;
+		border-radius: 50%;
+		padding: 8px;
+		font-size: 15px;
+		color: #fff;
+		cursor: pointer;
+		transition: ease-in-out 0.4s;
+		opacity: 0.9;
+
+		&:hover {
+			background: #ff0000;
+		}
+	}
+
+	.bookmarkIconContainer__button {
+		background: #4b4b4b;
+		border: none;
+		border-radius: 50%;
+		padding: 5px;
+		color: #fff;
+		cursor: pointer;
+		transition: ease-in-out 0.4s;
+		opacity: 0.9;
+		filter: grayscale(80%);
+
+		&:hover {
+			background: #ff0000;
+			filter: grayscale(0%);
+		}
+	}
+}

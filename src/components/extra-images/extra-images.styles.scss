@@ -1,0 +1,54 @@
+@import '../../styles/variables.scss';
+
+.extraImagesContainer {
+	.extraImagesContainer__title {
+		font-family: $primary-font;
+		letter-spacing: 1px;
+		text-align: center;
+		font-size: 40px;
+		text-shadow: 2px 2px 50px $red;
+	}
+
+	.extraImagesContainer__results {
+		font-family: $secondary-font;
+		font-size: 15px;
+		text-align: center;
+		margin: 0 5%;
+		line-height: 30px;
+	}
+
+	.extraImagesContainer__extraImages {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		gap: 30px;
+		margin: 5%;
+
+		img {
+			width: 100%;
+			align-self: center;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.extraImagesContainer {
+		.extraImagesContainer__extraImages {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+
+			img {
+				width: 50%;
+				margin: auto;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.extraImagesContainer {
+		.extraImagesContainer__extraImages {
+			display: grid;
+			grid-template-columns: 1fr;
+		}
+	}
+}
