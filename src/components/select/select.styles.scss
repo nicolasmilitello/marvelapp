@@ -1,0 +1,42 @@
+@import '../../styles/variables.scss';
+
+.selectContainer {
+	.selectContainer__select {
+		width: 280px;
+		height: 30px;
+		border: 2px solid transparent;
+		outline: none;
+		color: $red;
+		background-color: #ffffff;
+		padding: 5px;
+		transition: 0.5s linear;
+		font-family: $secondary-font;
+		z-index: 1;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.selectContainer {
+		.selectContainer__select {
+			width: 200px;
+		}
+	}
+}
+
+@media only screen and (max-width: 720px) {
+	.selectContainer {
+		.selectContainer__select {
+			width: 180px;
+		}
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	.selectContainer {
+		margin: 1%;
+		width: 100%;
+		.selectContainer__select {
+			width: 100%;
+		}
+	}
+}

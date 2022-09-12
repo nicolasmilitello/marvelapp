@@ -1,0 +1,64 @@
+@import '../../styles/variables.scss';
+
+.searchBarContainer {
+	.searchBarContainer__input {
+		width: 280px;
+		height: 30px;
+		border: 2px solid transparent;
+		outline: none;
+		background-color: #ffffff;
+		padding: 5px;
+		transition: 0.5s linear;
+		font-family: $secondary-font;
+
+		&::placeholder {
+			color: $red;
+			transition: 0.5s linear;
+		}
+
+		&:focus {
+			border: 2px solid #fa4753;
+			color: #fa4753;
+			box-shadow: 4px 4px 10px #070707;
+		}
+
+		&:focus::placeholder {
+			transition: 0.5s linear;
+			color: #ffa1a1;
+		}
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.searchBarContainer {
+		.searchBarContainer__input {
+			width: 240px;
+		}
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.searchBarContainer {
+		.searchBarContainer__input {
+			width: 200px;
+		}
+	}
+}
+
+@media only screen and (max-width: 720px) {
+	.searchBarContainer {
+		.searchBarContainer__input {
+			width: 180px;
+		}
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	.searchBarContainer {
+		margin: 1%;
+		width: 100%;
+		.searchBarContainer__input {
+			width: 100%;
+		}
+	}
+}
