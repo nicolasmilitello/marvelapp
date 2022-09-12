@@ -1,0 +1,46 @@
+.hideResourceIconContainer {
+	position: absolute;
+	bottom: 2%;
+	right: 5%;
+
+	.hiddenResourcesIconContainer__button-hidden {
+		background: #a52d2d;
+		border: none;
+		border-radius: 50%;
+		padding: 3px;
+		font-size: 20px;
+		color: #fff;
+		cursor: pointer;
+		transition: ease-in-out 0.4s;
+		opacity: 0.9;
+
+		&:hover {
+			background: #ff0000;
+		}
+	}
+
+	.hiddenResourcesIconContainer__button {
+		background: #4b4b4b;
+		border: none;
+		border-radius: 50%;
+		padding: 5px;
+		color: #fff;
+		cursor: pointer;
+		transition: ease-in-out 0.4s;
+		opacity: 0.9;
+
+		div {
+			opacity: 0.5;
+			transition: ease-in-out 0.4s;
+			filter: grayscale(100%);
+		}
+
+		&:hover {
+			background: #ff0000;
+			div {
+				opacity: 1;
+				filter: grayscale(0%);
+			}
+		}
+	}
+}
