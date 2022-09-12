@@ -1,0 +1,43 @@
+@import '../../styles/variables.scss';
+
+.collectionContainer {
+	margin: 5%;
+
+	.collectionContainer__results {
+		font-family: $secondary-font;
+		font-size: 15px;
+		text-align: center;
+		margin: 0 5%;
+		line-height: 30px;
+	}
+
+	.collectionContainer__title {
+		font-family: $primary-font;
+		letter-spacing: 1px;
+		text-align: center;
+		font-size: 40px;
+		text-shadow: 2px 2px 50px rgb(223, 87, 87);
+	}
+
+	.collectionContainer__cardsContainer {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		gap: 30px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.collectionContainer {
+		.collectionContainer__cardsContainer {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.collectionContainer {
+		.collectionContainer__cardsContainer {
+			grid-template-columns: 1fr;
+		}
+	}
+}
