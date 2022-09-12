@@ -1,0 +1,24 @@
+@import '../../styles/variables.scss';
+
+.coverPictureContainer {
+	.detailsPageContainer__images {
+		display: flex;
+		justify-content: center;
+
+		img {
+			border: 5px solid $red;
+			width: 25%;
+			margin: 5%;
+		}
+	}
+}
+
+@media only screen and (max-width: 950px) {
+	.coverPictureContainer {
+		.detailsPageContainer__images {
+			img {
+				width: 50%;
+			}
+		}
+	}
+}
