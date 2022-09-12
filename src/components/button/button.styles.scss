@@ -1,0 +1,50 @@
+@import '../../styles/variables.scss';
+
+.btn {
+	font-family: $secondary-font;
+	font-weight: 800;
+	background: none;
+	padding: 5px 8px;
+	color: $red;
+	border: 1px solid $red;
+	cursor: pointer;
+	transition: 0.7s;
+	margin: 5px;
+
+	&:hover {
+		background: $red;
+		color: #ffffff;
+		transition: 0.7s;
+	}
+}
+
+.btn-selected {
+	background: $red;
+	color: #ffffff;
+	border: 1px solid $red;
+	box-shadow: none;
+	cursor: default;
+	padding: 3px 6px;
+
+	&:hover {
+		background: $red;
+		color: #000000;
+		box-shadow: none;
+		border: 1px solid $red;
+	}
+}
+
+.btn-disabled {
+	background: #4e4e4ef6;
+	cursor: default;
+	color: #000000;
+	border: none;
+	box-shadow: none;
+
+	&:hover {
+		background: #4e4e4ef6;
+		border: none;
+		box-shadow: none;
+		color: #000000;
+	}
+}
