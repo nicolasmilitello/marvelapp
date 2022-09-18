@@ -78,7 +78,11 @@ const BookmarkIcon = ({ id, type, element }: BookmarkIconProps) => {
 					handleBookMark(e);
 				}}
 			>
-				❤️
+				{state.bookmarks[type as keyof BookmarksAndHiddenRosourcesType]
+					.map((pieceOfData) => pieceOfData.id === id)
+					.includes(true)
+					? 'REMOVE FAVORITE ❤️'
+					: 'ADD FAVORITE ❤️'}
 			</button>
 		</div>
 	);
