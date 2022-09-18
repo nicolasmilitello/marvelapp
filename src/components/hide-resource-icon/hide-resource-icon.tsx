@@ -78,7 +78,13 @@ const HideResourceIcon = ({ id, type, element }: HideResourceIconProps) => {
 					handleResource(e);
 				}}
 			>
-				<div>🚫</div>
+				{state.hiddenResources[
+					type as keyof BookmarksAndHiddenRosourcesType
+				]
+					.map((pieceOfData) => pieceOfData.id === id)
+					.includes(true)
+					? 'SHOW ✅'
+					: 'HIDE 🚫'}
 			</button>
 		</div>
 	);

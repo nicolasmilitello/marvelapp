@@ -17,6 +17,7 @@ import FilterParamsType from '../../interfaces/filter-params-type';
 
 //* styles
 import './pagination.styles.scss';
+import { pageNumberLimit } from '../../constants/page-number-limit';
 
 type PaginationProps = {
 	params: FilterParamsType;
@@ -35,11 +36,9 @@ export default function Pagination({
 	cardsPerPage,
 	totalCards,
 }: PaginationProps) {
-	const [pageNumberLimit] = useState(3);
+	const [maxPageNumberLimit, setMaxPageNumberLimit] = React.useState(3);
 
-	const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(3);
-
-	const [minPageNumberLimit, setMinPageNumberLimit] = useState(0);
+	const [minPageNumberLimit, setMinPageNumberLimit] = React.useState(0);
 
 	useEffect(() => {
 		if (currentPage === 1) {
@@ -149,7 +148,7 @@ export default function Pagination({
 	});
 
 	return (
-		<div className='paginationContainer'>
+		<div className='paginationContainer' data-testid='pagination-component'>
 			<Button
 				content='<'
 				eventHandler={handleClickPrev}

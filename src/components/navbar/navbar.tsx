@@ -38,7 +38,7 @@ const NavBar = () => {
 	return (
 		<div className='navBarContainer'>
 			<div>
-				<Link to='/'>
+				<Link to='/' data-testid='logoHome-link'>
 					<img src={logo} alt='marvel logo' />
 				</Link>
 				<button className='nav-btn' onClick={setIsOpen}>
@@ -51,6 +51,7 @@ const NavBar = () => {
 					to='/'
 					className={addClassDependingOnPath('/')}
 					onClick={setIsOpen}
+					data-testid='home-link'
 				>
 					Home
 				</Link>
@@ -59,6 +60,7 @@ const NavBar = () => {
 					to='/characters'
 					className={addClassDependingOnPath('characters')}
 					onClick={setIsOpen}
+					data-testid='characters-link'
 				>
 					Characters
 				</Link>
@@ -67,6 +69,7 @@ const NavBar = () => {
 					to='/comics'
 					className={addClassDependingOnPath('comics')}
 					onClick={setIsOpen}
+					data-testid='comics-link'
 				>
 					Comics
 				</Link>
@@ -75,6 +78,7 @@ const NavBar = () => {
 					to='/stories'
 					className={addClassDependingOnPath('stories')}
 					onClick={setIsOpen}
+					data-testid='stories-link'
 				>
 					Stories
 				</Link>
@@ -83,6 +87,7 @@ const NavBar = () => {
 					to='/bookmarks'
 					className={addClassDependingOnPath('bookmarks')}
 					onClick={setIsOpen}
+					data-testid='bookmarks-link'
 				>
 					Bookmarks
 				</Link>
@@ -91,6 +96,7 @@ const NavBar = () => {
 					to='/hidden-resources'
 					className={addClassDependingOnPath('hidden-resources')}
 					onClick={setIsOpen}
+					data-testid='hiddenResources-link'
 				>
 					Hidden Resources
 				</Link>
