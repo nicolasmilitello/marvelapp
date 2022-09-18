@@ -71,6 +71,7 @@ const Select = ({
 						key={`${option.replace(' ', '-')}`}
 						id={`${option.replace(' ', '-')}`}
 						value={option}
+						data-testid='select-option'
 					>
 						{`${option[0].toUpperCase()}${option.slice(1)}`}
 					</option>
