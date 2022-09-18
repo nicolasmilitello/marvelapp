@@ -64,7 +64,7 @@ const StoriesPage = () => {
 	}, [data]);
 
 	return (
-		<div className='storiesPageContainer'>
+		<div className='storiesPageContainer' data-testid='stories-page'>
 			<div className='storiesPageContainer__filterContainer'>
 				<SelectFilter
 					setCurrentPage={setCurrentPage}
