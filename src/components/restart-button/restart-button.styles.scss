@@ -6,6 +6,9 @@
 	padding: 10px;
 	display: flex;
 	justify-content: center;
+	font-family: $secondary-font;
+	letter-spacing: -1px;
+	font-size: 18px;
 
 	button {
 		background: $red;
@@ -20,11 +23,33 @@
 		padding: 10px;
 		border: 3px solid $darkerRed;
 		transition: 0.5s;
+		margin: 0 10px;
 
 		&:hover {
 			background-color: #ffffff;
 			transition: 0.5s;
 			color: #000000;
+		}
+	}
+
+	.restartButtonContainer__button-disabled {
+		background: #747474;
+		font-family: $secondary-font;
+		text-transform: uppercase;
+		letter-spacing: -1px;
+		font-weight: 900;
+		border: none;
+		color: #ffffff;
+		font-size: 16px;
+		cursor: default;
+		padding: 10px;
+		border: 3px solid $darkerRed;
+		transition: 0.5s;
+		margin: 0 10px;
+
+		&:hover {
+			background: #747474;
+			color: #ffffff;
 		}
 	}
 }
