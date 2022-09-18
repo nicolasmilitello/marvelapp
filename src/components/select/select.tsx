@@ -59,6 +59,7 @@ const Select = ({
 				name='select'
 				defaultValue={'DEFAULT'}
 				onChange={(e) => handleSelectChange(e)}
+				data-testid="select-element"
 			>
 				<option value='DEFAULT' disabled>
 					{placeholder}
