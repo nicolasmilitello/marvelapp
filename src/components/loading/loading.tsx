@@ -8,7 +8,7 @@ import './loading.styles.scss';
 
 const Loading = () => {
 	return (
-		<div className='loadingContainer'>
+		<div className='loadingContainer' data-testid='loading-component'>
 			<img src={loadingImage} alt='Loading' />
 		</div>
 	);

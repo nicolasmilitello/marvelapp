@@ -69,7 +69,7 @@ const CharacterPage = () => {
 	}, [data]);
 
 	return (
-		<div className='characterPageContainer'>
+		<div className='characterPageContainer' data-testid='characters-page'>
 			<div className='characterPageContainer__filterContainer'>
 				<SelectFilter
 					setCurrentPage={setCurrentPage}

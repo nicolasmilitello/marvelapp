@@ -67,7 +67,7 @@ const ComicsPage = () => {
 	}, [data]);
 
 	return (
-		<div className='comicsPageContainer'>
+		<div className='comicsPageContainer' data-testid='comics-page'>
 			<div className='comicsPageContainer__filterContainer'>
 				<SearchBar
 					setCurrentPage={setCurrentPage}
@@ -91,7 +91,7 @@ const ComicsPage = () => {
 				<p className='comicsPageContainer__error'>{`Sorry, an error ocurred. ${error.status}: ${error.message}`}</p>
 			)}
 
-			{!loading && !error && (
+			{!loading && !error && data && (
 				<Collection loading={loading} typeOfContent='comics' />
 			)}
 
