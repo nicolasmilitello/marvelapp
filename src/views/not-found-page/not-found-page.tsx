@@ -8,7 +8,7 @@ import './not-found-page.styles.scss';
 
 const NotFoundPage = () => {
 	return (
-		<div className='notFoundPageContainer'>
+		<div className='notFoundPageContainer' data-testid='notFound-page'>
 			<img src={notFoundImage} alt='not_found' />
 			<p className='notFoundPageContainer__error'>
 				Sorry, this page doesn't exist.
