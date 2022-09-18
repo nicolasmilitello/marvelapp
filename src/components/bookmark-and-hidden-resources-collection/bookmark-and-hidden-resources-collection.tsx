@@ -26,7 +26,10 @@ const BookmarkAndHiddenResourcesCollection = ({
 	const { state } = useContext(AppContext);
 
 	return (
-		<div className='bookmarkAndHiddenResourcesCollectionContainer'>
+		<div
+			className='bookmarkAndHiddenResourcesCollectionContainer'
+			data-testid='bookmark-and-hidden-resources-collection-component'
+		>
 			<h2 className='bookmarkAndHiddenResourcesCollection__title'>
 				{typeOfContent.toUpperCase()}
 			</h2>

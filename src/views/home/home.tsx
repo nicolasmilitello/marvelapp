@@ -14,7 +14,7 @@ import './home.styles.scss';
 
 const Home = () => {
 	return (
-		<div className='homeContainer'>
+		<div className='homeContainer' data-testid='home-page'>
 			<div className='homeContainer__headerImagesContainer'>
 				<img
 					className='homeContainer__headerImagesContainer__avengers'
