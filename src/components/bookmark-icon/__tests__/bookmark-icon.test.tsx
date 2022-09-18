@@ -1,25 +1,23 @@
 import React, { useReducer } from 'react';
 import { render, renderHook, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { marvelReducer } from '../../../reducer/reducer';
 import { AppContext, InitialStateInterface } from '../../../context/context';
 
 //* components
 import BookmarkIcon from '../bookmark-icon';
 
 //* mocks
-import { singleComicMock } from '../../../mocks/single-comic-mock';
-import { charactersMock } from '../../../mocks/characters-mock';
-
-//* utils
-import { marvelReducer } from '../../../reducer/reducer';
+import { mockcharacters } from '../../../mocks/mock-characters';
+import { mockcomics } from '../../../mocks/mock-comics';
 
 describe('<BookmarkIcon />', () => {
 	it('should render a button with a text', () => {
 		render(
 			<BookmarkIcon
-				id={singleComicMock.data.results[0].id}
+				id={mockcomics.data.results[0].id}
 				type='comics'
-				element={singleComicMock.data.results[0]}
+				element={mockcomics.data.results[0]}
 			/>
 		);
 
@@ -62,9 +60,9 @@ describe('<BookmarkIcon />', () => {
 				}}
 			>
 				<BookmarkIcon
-					id={charactersMock.data.results[0].id}
+					id={mockcharacters.data.results[0].id}
 					type='characters'
-					element={charactersMock.data.results[0]}
+					element={mockcharacters.data.results[0]}
 				/>
 			</AppContext.Provider>
 		);
@@ -74,7 +72,7 @@ describe('<BookmarkIcon />', () => {
 		expect(result.current[0].bookmarks.characters).toHaveLength(1);
 
 		expect(result.current[0].bookmarks.characters[0].id).toBe(
-			charactersMock.data.results[0].id
+			mockcharacters.data.results[0].id
 		);
 	});
 
@@ -90,7 +88,7 @@ describe('<BookmarkIcon />', () => {
 			storiesOptions: [],
 			bookmarks: {
 				characters: [],
-				comics: [singleComicMock.data.results[0]],
+				comics: [mockcomics.data.results[0]],
 				stories: [],
 			},
 			hiddenResources: {
@@ -112,9 +110,9 @@ describe('<BookmarkIcon />', () => {
 				}}
 			>
 				<BookmarkIcon
-					id={singleComicMock.data.results[0].id}
+					id={mockcomics.data.results[0].id}
 					type='comics'
-					element={singleComicMock.data.results[0]}
+					element={mockcomics.data.results[0]}
 				/>
 			</AppContext.Provider>
 		);
