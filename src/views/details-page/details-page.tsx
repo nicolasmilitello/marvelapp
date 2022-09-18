@@ -142,7 +142,7 @@ const DetailsPage = ({ type }: DetailsPagePropsType) => {
 	}, [data]);
 
 	return (
-		<div className='detailsPageContainer'>
+		<div className='detailsPageContainer' data-testid='details-page'>
 			{loading && <Loading />}
 
 			{error && (
