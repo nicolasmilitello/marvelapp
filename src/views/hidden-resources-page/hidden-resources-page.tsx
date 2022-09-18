@@ -9,7 +9,10 @@ import {
 
 const HiddenResourcesPage = () => {
 	return (
-		<div className='hiddenResourcesPageContainer'>
+		<div
+			className='hiddenResourcesPageContainer'
+			data-testid='hiddenResources-page'
+		>
 			<RestartButton type={'hiddenResources'} />
 
 			<BookmarkAndHiddenResourcesCollection
