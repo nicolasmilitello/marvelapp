@@ -9,7 +9,7 @@ import {
 
 const BookmarksPage = () => {
 	return (
-		<div className='bookmarksPageContainer'>
+		<div className='bookmarksPageContainer' data-testid='bookmarks-page'>
 			<RestartButton type={'bookmarks'} />
 
 			<BookmarkAndHiddenResourcesCollection
