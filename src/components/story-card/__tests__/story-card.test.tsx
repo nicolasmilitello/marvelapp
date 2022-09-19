@@ -5,7 +5,7 @@ import { screen } from '@testing-library/react';
 import StoryCard from '../story-card';
 
 //* mocks
-import { storiesMock } from '../../../mocks/stories-mock';
+import { mockstories } from '../../../mocks/mock-stories';
 
 //* utils
 import insertAWrapper from '../../../utils/test-utils/insert-a-wrapper';
@@ -14,25 +14,25 @@ describe('<StoryCard />', () => {
 	it('should render a title', () => {
 		insertAWrapper(
 			<StoryCard
-				id={storiesMock.data.results[0].id}
-				name={storiesMock.data.results[0].title}
+				id={mockstories.data.results[0].id}
+				name={mockstories.data.results[0].title}
 				type='stories'
-				element={storiesMock.data.results[0]}
+				element={mockstories.data.results[0]}
 			/>
 		);
 
 		expect(
-			screen.getByText(storiesMock.data.results[0].title)
+			screen.getByText(mockstories.data.results[0].title)
 		).toBeInTheDocument();
 	});
 
 	it('should render a marvel logo image', () => {
 		insertAWrapper(
 			<StoryCard
-				id={storiesMock.data.results[0].id}
-				name={storiesMock.data.results[0].title}
+				id={mockstories.data.results[0].id}
+				name={mockstories.data.results[0].title}
 				type='stories'
-				element={storiesMock.data.results[0]}
+				element={mockstories.data.results[0]}
 			/>
 		);
 
@@ -45,10 +45,10 @@ describe('<StoryCard />', () => {
 
 		const { container } = insertAWrapper(
 			<StoryCard
-				id={storiesMock.data.results[0].id}
-				name={storiesMock.data.results[0].title}
+				id={mockstories.data.results[0].id}
+				name={mockstories.data.results[0].title}
 				type='stories'
-				element={storiesMock.data.results[0]}
+				element={mockstories.data.results[0]}
 			/>
 		);
 
@@ -58,17 +58,17 @@ describe('<StoryCard />', () => {
 		await user.click(card);
 
 		expect(screen.getByTestId('location-display')).toHaveTextContent(
-			`/stories/${storiesMock.data.results[0].id}`
+			`/stories/${mockstories.data.results[0].id}`
 		);
 	});
 
 	it('should render a button to bookmark a resource', () => {
 		insertAWrapper(
 			<StoryCard
-				id={storiesMock.data.results[0].id}
-				name={storiesMock.data.results[0].title}
+				id={mockstories.data.results[0].id}
+				name={mockstories.data.results[0].title}
 				type='stories'
-				element={storiesMock.data.results[0]}
+				element={mockstories.data.results[0]}
 			/>
 		);
 		expect(
@@ -79,10 +79,10 @@ describe('<StoryCard />', () => {
 	it('should render a button to hide resource', () => {
 		insertAWrapper(
 			<StoryCard
-				id={storiesMock.data.results[0].id}
-				name={storiesMock.data.results[0].title}
+				id={mockstories.data.results[0].id}
+				name={mockstories.data.results[0].title}
 				type='stories'
-				element={storiesMock.data.results[0]}
+				element={mockstories.data.results[0]}
 			/>
 		);
 
