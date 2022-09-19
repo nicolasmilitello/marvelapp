@@ -1,4 +1,4 @@
-export const storiesMock = {
+export const mockstories = {
 	code: 200,
 	status: 'Ok',
 	copyright: '© 2022 MARVEL',

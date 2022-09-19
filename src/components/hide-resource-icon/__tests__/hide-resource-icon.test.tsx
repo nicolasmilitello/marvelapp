@@ -8,17 +8,16 @@ import { marvelReducer } from '../../../reducer/reducer';
 import HideResourceIcon from '../hide-resource-icon';
 
 //* mocks
-import { singleComicMock } from '../../../mocks/single-comic-mock';
-import { charactersMock } from '../../../mocks/characters-mock';
-import { comicsMock } from '../../../mocks/comics-mock';
+import { mockcharacters } from '../../../mocks/mock-characters';
+import { mockcomics } from '../../../mocks/mock-comics';
 
 describe('<HideResourceIcon />', () => {
 	it('should render a button with a text', () => {
 		render(
 			<HideResourceIcon
-				id={singleComicMock.data.results[0].id}
+				id={mockcomics.data.results[0].id}
 				type='comics'
-				element={singleComicMock.data.results[0]}
+				element={mockcomics.data.results[0]}
 			/>
 		);
 
@@ -61,9 +60,9 @@ describe('<HideResourceIcon />', () => {
 				}}
 			>
 				<HideResourceIcon
-					id={charactersMock.data.results[0].id}
+					id={mockcharacters.data.results[0].id}
 					type='characters'
-					element={charactersMock.data.results[0]}
+					element={mockcharacters.data.results[0]}
 				/>
 			</AppContext.Provider>
 		);
@@ -73,7 +72,7 @@ describe('<HideResourceIcon />', () => {
 		expect(result.current[0].hiddenResources.characters).toHaveLength(1);
 
 		expect(result.current[0].hiddenResources.characters[0].id).toBe(
-			charactersMock.data.results[0].id
+			mockcharacters.data.results[0].id
 		);
 	});
 
@@ -95,8 +94,8 @@ describe('<HideResourceIcon />', () => {
 			hiddenResources: {
 				characters: [],
 				comics: [
-					comicsMock.data.results[0],
-					comicsMock.data.results[1],
+					mockcomics.data.results[0],
+					mockcomics.data.results[1],
 				],
 				stories: [],
 			},
@@ -114,9 +113,9 @@ describe('<HideResourceIcon />', () => {
 				}}
 			>
 				<HideResourceIcon
-					id={comicsMock.data.results[0].id}
+					id={mockcomics.data.results[0].id}
 					type='comics'
-					element={comicsMock.data.results[0]}
+					element={mockcomics.data.results[0]}
 				/>
 			</AppContext.Provider>
 		);
@@ -126,7 +125,7 @@ describe('<HideResourceIcon />', () => {
 		expect(result.current[0].hiddenResources.comics).toHaveLength(1);
 
 		expect(result.current[0].hiddenResources.comics[0].id).not.toBe(
-			charactersMock.data.results[0].id
+			mockcomics.data.results[0].id
 		);
 	});
 });

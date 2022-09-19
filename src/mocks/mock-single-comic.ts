@@ -1,16 +1,14 @@
-import { ComicsResponse } from '../interfaces/comics-response-api';
-
-export const singleComicMock: ComicsResponse = {
+export const mocksinglecomic = {
 	code: 200,
 	status: 'Ok',
 	copyright: '© 2022 MARVEL',
 	attributionText: 'Data provided by Marvel. © 2022 MARVEL',
 	attributionHTML:
 		'<a href="http://marvel.com">Data provided by Marvel. © 2022 MARVEL</a>',
-	etag: '669ab61fd31715258177ba36eb66c9a18818eaa3',
+	etag: '089cb1cf4018ad05b3b21fa06908de20485a3e2f',
 	data: {
 		offset: 0,
-		limit: 12,
+		limit: 20,
 		total: 1,
 		count: 1,
 		results: [
@@ -20,8 +18,7 @@ export const singleComicMock: ComicsResponse = {
 				title: 'ULTIMATE X-MEN VOL. 5: ULTIMATE WAR TPB (Trade Paperback)',
 				issueNumber: 0,
 				variantDescription: '',
-				description:
-					"The Ultimates vs. the Ultimate X-Men: the battle begins. When the X-Men do the worst thing they could to humanity, the government orders Captain America, Iron Man, Thor and the rest of the Ultimates to bring them down. A small but lethal army, the Ultimates were created to face these and other newly rising threats to mankind. But the X-Men's founder, Professor X, hasn't been training his students for nothing -- and the youngs mutants just might take out the Ultimates first.",
+				description: '',
 				modified: '2018-03-12T16:56:16-0400',
 				isbn: '0-7851-1129-8',
 				upc: '',
@@ -41,7 +38,7 @@ export const singleComicMock: ComicsResponse = {
 				urls: [
 					{
 						type: 'detail',
-						url: 'http://marvel.com/comics/collection/1158/ultimate_x-men_vol_5_ultimate_war_tpb_trade_paperback?utm_campaign=apiRef&utm_source=76499bc6dba32b9fdd9b6eaa163aacbd',
+						url: 'http://marvel.com/comics/collection/1158/ultimate_x-men_vol_5_ultimate_war_tpb_trade_paperback?utm_campaign=apiRef&utm_source=b0eceef3a20b283c6b405ae273a96214',
 					},
 				],
 				series: {

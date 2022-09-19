@@ -5,7 +5,7 @@ import { screen } from '@testing-library/react';
 import Card from '../card';
 
 //* mocks
-import { comicsMock } from '../../../mocks/comics-mock';
+import { mockcomics } from '../../../mocks/mock-comics';
 
 //* utils
 import insertAWrapper from '../../../utils/test-utils/insert-a-wrapper';
@@ -14,27 +14,27 @@ describe('<Card />', () => {
 	it('should render a title', () => {
 		insertAWrapper(
 			<Card
-				id={comicsMock.data.results[0].id}
-				imgUrl={`${comicsMock.data.results[0].thumbnail.path}.${comicsMock.data.results[0].thumbnail.extension}`}
-				name={comicsMock.data.results[0].title}
+				id={mockcomics.data.results[0].id}
+				imgUrl={`${mockcomics.data.results[0].thumbnail.path}.${mockcomics.data.results[0].thumbnail.extension}`}
+				name={mockcomics.data.results[0].title}
 				type='comics'
-				element={comicsMock.data.results[0]}
+				element={mockcomics.data.results[0]}
 			/>
 		);
 
 		expect(
-			screen.getByText(comicsMock.data.results[0].title)
+			screen.getByText(mockcomics.data.results[0].title)
 		).toBeInTheDocument();
 	});
 
 	it('should render an image', () => {
 		insertAWrapper(
 			<Card
-				id={comicsMock.data.results[0].id}
-				imgUrl={`${comicsMock.data.results[0].thumbnail.path}.${comicsMock.data.results[0].thumbnail.extension}`}
-				name={comicsMock.data.results[0].title}
+				id={mockcomics.data.results[0].id}
+				imgUrl={`${mockcomics.data.results[0].thumbnail.path}.${mockcomics.data.results[0].thumbnail.extension}`}
+				name={mockcomics.data.results[0].title}
 				type='comics'
-				element={comicsMock.data.results[0]}
+				element={mockcomics.data.results[0]}
 			/>
 		);
 
@@ -44,20 +44,20 @@ describe('<Card />', () => {
 	it('should render the image passed by props', () => {
 		insertAWrapper(
 			<Card
-				id={comicsMock.data.results[0].id}
-				imgUrl={`${comicsMock.data.results[0].thumbnail.path}.${comicsMock.data.results[0].thumbnail.extension}`}
-				name={comicsMock.data.results[0].title}
+				id={mockcomics.data.results[0].id}
+				imgUrl={`${mockcomics.data.results[0].thumbnail.path}.${mockcomics.data.results[0].thumbnail.extension}`}
+				name={mockcomics.data.results[0].title}
 				type='comics'
-				element={comicsMock.data.results[0]}
+				element={mockcomics.data.results[0]}
 			/>
 		);
 
 		expect(screen.getAllByRole('img')[0].getAttribute('src')).toMatch(
-			`${comicsMock.data.results[0].thumbnail.path}.${comicsMock.data.results[0].thumbnail.extension}`
+			`${mockcomics.data.results[0].thumbnail.path}.${mockcomics.data.results[0].thumbnail.extension}`
 		);
 
 		expect(screen.getAllByRole('img')[0].getAttribute('alt')).toMatch(
-			`${comicsMock.data.results[0].title}`
+			`${mockcomics.data.results[0].title}`
 		);
 	});
 
@@ -66,11 +66,11 @@ describe('<Card />', () => {
 
 		const { container } = insertAWrapper(
 			<Card
-				id={comicsMock.data.results[0].id}
-				imgUrl={`${comicsMock.data.results[0].thumbnail.path}.${comicsMock.data.results[0].thumbnail.extension}`}
-				name={comicsMock.data.results[0].title}
+				id={mockcomics.data.results[0].id}
+				imgUrl={`${mockcomics.data.results[0].thumbnail.path}.${mockcomics.data.results[0].thumbnail.extension}`}
+				name={mockcomics.data.results[0].title}
 				type='comics'
-				element={comicsMock.data.results[0]}
+				element={mockcomics.data.results[0]}
 			/>
 		);
 
@@ -80,18 +80,18 @@ describe('<Card />', () => {
 		await user.click(card);
 
 		expect(screen.getByTestId('location-display')).toHaveTextContent(
-			`/comics/${comicsMock.data.results[0].id}`
+			`/comics/${mockcomics.data.results[0].id}`
 		);
 	});
 
 	it('should render a button to bookmark a resource', () => {
 		insertAWrapper(
 			<Card
-				id={comicsMock.data.results[0].id}
-				imgUrl={`${comicsMock.data.results[0].thumbnail.path}.${comicsMock.data.results[0].thumbnail.extension}`}
-				name={comicsMock.data.results[0].title}
+				id={mockcomics.data.results[0].id}
+				imgUrl={`${mockcomics.data.results[0].thumbnail.path}.${mockcomics.data.results[0].thumbnail.extension}`}
+				name={mockcomics.data.results[0].title}
 				type='comics'
-				element={comicsMock.data.results[0]}
+				element={mockcomics.data.results[0]}
 			/>
 		);
 		expect(
@@ -102,11 +102,11 @@ describe('<Card />', () => {
 	it('should render a button to hide resource', () => {
 		insertAWrapper(
 			<Card
-				id={comicsMock.data.results[0].id}
-				imgUrl={`${comicsMock.data.results[0].thumbnail.path}.${comicsMock.data.results[0].thumbnail.extension}`}
-				name={comicsMock.data.results[0].title}
+				id={mockcomics.data.results[0].id}
+				imgUrl={`${mockcomics.data.results[0].thumbnail.path}.${mockcomics.data.results[0].thumbnail.extension}`}
+				name={mockcomics.data.results[0].title}
 				type='comics'
-				element={comicsMock.data.results[0]}
+				element={mockcomics.data.results[0]}
 			/>
 		);
 
