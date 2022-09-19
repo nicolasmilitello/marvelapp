@@ -5,13 +5,13 @@ import { render, screen } from '@testing-library/react';
 import Button from '../button';
 
 //* mocks
-import { singleComicMock } from '../../../mocks/single-comic-mock';
+import { mockcomics } from '../../../mocks/mock-comics';
 
 describe('<Button />', () => {
 	const renderButton = (selected: boolean, disabled: boolean) => {
 		render(
 			<Button
-				id={`${singleComicMock.data.results[0].id}`}
+				id={`${mockcomics.data.results[0].id}`}
 				content='Testing button'
 				selected={selected}
 				disabled={disabled}

@@ -91,7 +91,7 @@ const ComicsPage = () => {
 				<p className='comicsPageContainer__error'>{`Sorry, an error ocurred. ${error.status}: ${error.message}`}</p>
 			)}
 
-			{!loading && !error && data && (
+			{!loading && !error && (
 				<Collection loading={loading} typeOfContent='comics' />
 			)}
 

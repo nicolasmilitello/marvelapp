@@ -1,6 +1,4 @@
-import { ComicsResponse } from '../interfaces/comics-response-api';
-
-export const comicsMock: ComicsResponse = {
+export const mockcomics = {
 	code: 200,
 	status: 'Ok',
 	copyright: '© 2022 MARVEL',
