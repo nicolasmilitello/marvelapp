@@ -1,1 +1,1 @@
-export const endpoint = 'https://gateway.marvel.com/v1/public';
+export const endpoint = `${process.env.REACT_APP_API_ENDPOINT}`;
